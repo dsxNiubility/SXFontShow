@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SXFontShowVC.h
 //  SXFontShow
 //
 //  Created by dongshangxian on 15/8/2.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SXFontShowVC : UIViewController
 
 
 @end

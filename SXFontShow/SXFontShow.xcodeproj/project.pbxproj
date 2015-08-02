@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		1D007FA21B6E04AE00EA119C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D007FA11B6E04AE00EA119C /* main.m */; };
 		1D007FA51B6E04AE00EA119C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D007FA41B6E04AE00EA119C /* AppDelegate.m */; };
-		1D007FA81B6E04AE00EA119C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D007FA71B6E04AE00EA119C /* ViewController.m */; };
-		1D007FAB1B6E04AE00EA119C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D007FA91B6E04AE00EA119C /* Main.storyboard */; };
+		1D007FA81B6E04AE00EA119C /* SXFontShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D007FA71B6E04AE00EA119C /* SXFontShowVC.m */; };
 		1D007FAD1B6E04AE00EA119C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D007FAC1B6E04AE00EA119C /* Images.xcassets */; };
 		1D007FB01B6E04AE00EA119C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D007FAE1B6E04AE00EA119C /* LaunchScreen.xib */; };
 		1D007FBC1B6E04AE00EA119C /* SXFontShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D007FBB1B6E04AE00EA119C /* SXFontShowTests.m */; };
+		1D007FC71B6E147700EA119C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D007FC51B6E147700EA119C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		1D007FA11B6E04AE00EA119C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D007FA31B6E04AE00EA119C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D007FA41B6E04AE00EA119C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D007FA61B6E04AE00EA119C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1D007FA71B6E04AE00EA119C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1D007FAA1B6E04AE00EA119C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D007FA61B6E04AE00EA119C /* SXFontShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXFontShowVC.h; sourceTree = "<group>"; };
+		1D007FA71B6E04AE00EA119C /* SXFontShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXFontShowVC.m; sourceTree = "<group>"; };
 		1D007FAC1B6E04AE00EA119C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D007FAF1B6E04AE00EA119C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1D007FB51B6E04AE00EA119C /* SXFontShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXFontShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D007FBA1B6E04AE00EA119C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D007FBB1B6E04AE00EA119C /* SXFontShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXFontShowTests.m; sourceTree = "<group>"; };
+		1D007FC61B6E147700EA119C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +81,8 @@
 		1D007F9E1B6E04AE00EA119C /* SXFontShow */ = {
 			isa = PBXGroup;
 			children = (
-				1D007FA31B6E04AE00EA119C /* AppDelegate.h */,
-				1D007FA41B6E04AE00EA119C /* AppDelegate.m */,
-				1D007FA61B6E04AE00EA119C /* ViewController.h */,
-				1D007FA71B6E04AE00EA119C /* ViewController.m */,
-				1D007FA91B6E04AE00EA119C /* Main.storyboard */,
-				1D007FAC1B6E04AE00EA119C /* Images.xcassets */,
-				1D007FAE1B6E04AE00EA119C /* LaunchScreen.xib */,
+				1D007FA61B6E04AE00EA119C /* SXFontShowVC.h */,
+				1D007FA71B6E04AE00EA119C /* SXFontShowVC.m */,
 				1D007F9F1B6E04AE00EA119C /* Supporting Files */,
 			);
 			path = SXFontShow;
@@ -96,6 +91,11 @@
 		1D007F9F1B6E04AE00EA119C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D007FA31B6E04AE00EA119C /* AppDelegate.h */,
+				1D007FA41B6E04AE00EA119C /* AppDelegate.m */,
+				1D007FC51B6E147700EA119C /* Main.storyboard */,
+				1D007FAC1B6E04AE00EA119C /* Images.xcassets */,
+				1D007FAE1B6E04AE00EA119C /* LaunchScreen.xib */,
 				1D007FA01B6E04AE00EA119C /* Info.plist */,
 				1D007FA11B6E04AE00EA119C /* main.m */,
 			);
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D007FAB1B6E04AE00EA119C /* Main.storyboard in Resources */,
+				1D007FC71B6E147700EA119C /* Main.storyboard in Resources */,
 				1D007FB01B6E04AE00EA119C /* LaunchScreen.xib in Resources */,
 				1D007FAD1B6E04AE00EA119C /* Images.xcassets in Resources */,
 			);
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D007FA81B6E04AE00EA119C /* ViewController.m in Sources */,
+				1D007FA81B6E04AE00EA119C /* SXFontShowVC.m in Sources */,
 				1D007FA51B6E04AE00EA119C /* AppDelegate.m in Sources */,
 				1D007FA21B6E04AE00EA119C /* main.m in Sources */,
 			);
@@ -244,20 +244,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1D007FA91B6E04AE00EA119C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D007FAA1B6E04AE00EA119C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D007FAE1B6E04AE00EA119C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1D007FAF1B6E04AE00EA119C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1D007FC51B6E147700EA119C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D007FC61B6E147700EA119C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,6 +418,7 @@
 				1D007FC11B6E04AE00EA119C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D007FC21B6E04AE00EA119C /* Build configuration list for PBXNativeTarget "SXFontShowTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				1D007FC41B6E04AE00EA119C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

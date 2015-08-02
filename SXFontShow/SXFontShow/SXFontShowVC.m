@@ -1,28 +1,26 @@
 //
-//  ViewController.m
+//  SXFontShowVC.m
 //  SXFontShow
 //
 //  Created by dongshangxian on 15/8/2.
 //  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SXFontShowVC.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface SXFontShowVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)UITableView * tableView2;
 @end
 
-@implementation ViewController
+@implementation SXFontShowVC
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-
     
     _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT-40)style:UITableViewStyleGrouped];
     _tableView.delegate=self;
@@ -35,7 +33,7 @@
     [self.view addSubview:_tableView2];
     
     UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-    topView.backgroundColor = [UIColor orangeColor];
+    topView.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:topView];
     
     UIButton *btnLess = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/4, 0, SCREEN_WIDTH/4, 40)];
@@ -52,6 +50,7 @@
     [topView addSubview:btnLess];
     [topView addSubview:btnMore];
     
+    [self topClickWithSender:btnLess];
 }
 
 - (void)topClickWithSender:(UIButton *)button
@@ -145,12 +144,12 @@
     //    NSLog(@"%@",fontName);
     
     if (tableView == self.tableView) {
-        cell.textLabel.text=@"DSXNiubility-2015";
+        cell.textLabel.text=@"DSXNiubility-2015@;";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", familyName];
         cell.textLabel.font = [UIFont fontWithName:fontName size:20.0f];
         cell.detailTextLabel.font = [UIFont fontWithName:fontName size:12.0f];
     }else{
-        cell.textLabel.text=@"董铂然DSXNiubility-2015";
+        cell.textLabel.text=@"董铂然-DSX-dantesx2012@gmail.com";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",fontName ];
         cell.textLabel.font = [UIFont fontWithName:fontName size:16.0f];
     }
