@@ -18,6 +18,8 @@
 
 @implementation SXFontShowVC
 
+#pragma mark - **************** 初始样式
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -65,9 +67,14 @@
     
 }
 
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+#pragma mark - **************** UITableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
     //字体家族总数
     return [[UIFont familyNames] count];
 }
@@ -87,39 +94,15 @@
     if (tableView == self.tableView) {
         return @"";
     }else{
-        //字体家族名称
         return [[UIFont familyNames] objectAtIndex:section];
     }
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (tableView == self.tableView) {
-        return CGFLOAT_MIN;
-    }else{
-        //字体家族名称
-        return 30;
-    }
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    if (tableView == self.tableView) {
-        return CGFLOAT_MIN;
-    }else{
-        //字体家族名称
-        return 10;
-    }
-}
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
     [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     return index;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
@@ -134,14 +117,9 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
     }
-    
-    //字体家族名称
+
     NSString *familyName= [[UIFont familyNames] objectAtIndex:indexPath.section];
-    
-    //字体家族中的字体库名称
     NSString *fontName  = [[UIFont fontNamesForFamilyName:[[UIFont familyNames] objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-    
-    //    NSLog(@"%@",fontName);
     
     if (tableView == self.tableView) {
         cell.textLabel.text=@"DSXNiubility-2015@;";
@@ -158,21 +136,34 @@
     
 }
 
+#pragma mark - **************** UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (tableView == self.tableView) {
+        return CGFLOAT_MIN;
+    }else{
+        return 30;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (tableView == self.tableView) {
+        return CGFLOAT_MIN;
+    }else{
+        return 10;
+    }
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //字体家族名称
+
     NSString *familyName= [[UIFont familyNames] objectAtIndex:indexPath.section];
-    
-    //字体家族中的字体库名称
     NSString *fontName  = [[UIFont fontNamesForFamilyName:[[UIFont familyNames] objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     
     NSLog(@"%@-%@",familyName,fontName);
     
-}
-
-- (BOOL)prefersStatusBarHidden{
-    return YES;
 }
 
 @end
