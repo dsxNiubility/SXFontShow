@@ -104,6 +104,7 @@
     return index;
 }
 
+int a = 0;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
@@ -128,7 +129,7 @@
         cell.detailTextLabel.font = [UIFont fontWithName:fontName size:12.0f];
     }else{
         cell.textLabel.text=@"董铂然-DSX-dantesx2012@gmail.com";
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",fontName ];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d - %@",a++,fontName];
         cell.textLabel.font = [UIFont fontWithName:fontName size:16.0f];
     }
     
