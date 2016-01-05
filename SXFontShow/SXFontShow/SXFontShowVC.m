@@ -120,7 +120,15 @@ int a = 0;
     }
 
     NSString *familyName= [[UIFont familyNames] objectAtIndex:indexPath.section];
-    NSString *fontName  = [[UIFont fontNamesForFamilyName:[[UIFont familyNames] objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    
+    NSArray *fontNameArray = [UIFont fontNamesForFamilyName:familyName];
+    if (fontNameArray.count < 1) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@字体在iOS9后废弃了",familyName];
+        cell.detailTextLabel.text = @"";
+        cell.textLabel.font = [UIFont systemFontOfSize:10];
+        return cell;
+    }
+    NSString *fontName  = [fontNameArray objectAtIndex:indexPath.row];
     
     if (tableView == self.tableView) {
         cell.textLabel.text=@"DSXNiubility-2015@;";
@@ -134,7 +142,6 @@ int a = 0;
     }
     
     return cell;
-    
 }
 
 #pragma mark - **************** UITableViewDelegate
