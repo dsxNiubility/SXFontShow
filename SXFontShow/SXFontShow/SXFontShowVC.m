@@ -64,7 +64,6 @@
         _tableView.hidden = YES;
         _tableView2.hidden = NO;
     }
-    
 }
 
 - (BOOL)prefersStatusBarHidden{
